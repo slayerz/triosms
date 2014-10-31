@@ -1,0 +1,26 @@
+{
+    "name": "slayerz/triosms",
+    "description": "Send SMS in Laravel 4 using API from trio-mobile.com",
+    "keywords": ["laravel", "sms", "trio-mobile"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pikri Mohammad",
+            "email": "slayerz.wn@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "curl/curl": "1.1.5"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Slayerz\\Triosms\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
