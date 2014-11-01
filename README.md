@@ -15,7 +15,7 @@ Require this package with composer:
 
 	composer require slayerz/triosms
 
-After updating composer, add the ServiceProvider to the providers array in `app/config/app.php`
+After updating composer, add the ServiceProvider to the providers array in **`app/config/app.php`**
 
 	'Slayerz\Triosms\TriosmsServiceProvider',
 
@@ -23,13 +23,14 @@ You can have your own config for this package by publishing it
 
 	php artisan config:publish slayerz/triosms
 
-Once published, you can modify the config in `app/config/packages/slayerz/triosms/config.php`
+Once published, you can modify the config in **`app/config/packages/slayerz/triosms/config.php`**
 
 	'url'	=> 'API-URL-ADDRESS',
 	'token' => 'API-TOKEN',
 	'mode'	=> 'ACCOUNT-WITH-CREDIT'
 
 You have to configure the default sender mode for your account.
+
 The default sender mode is set to _`shortcode`_
 
 Available mode for Trio SMS:
@@ -52,7 +53,7 @@ Function balance()
 
 	Sms::balance($mode = '');
 
-- **$mode**: account you wish to check balance from (default: shortcode)
+- **$mode**: account you wish to check balance from (default: `shortcode`)
 
 ## Usage Example
 
