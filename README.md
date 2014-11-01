@@ -40,7 +40,7 @@ Available mode for Trio SMS:
 
 ### Usage
 
-Function send()
+##### Function send()
 
 	Sms::send($recipient, $message, $mode = '', $format = '');
 
@@ -49,8 +49,7 @@ Function send()
 - **$mode**: account to send the SMS from (default: `shortcode`)
 - **$format**: content type either 1: ASCII or 4: UNICODE (defaut: `1`)
 
-
-Function balance()
+##### Function balance()
 
 	Sms::balance($mode = '');
 
@@ -58,7 +57,7 @@ Function balance()
 
 ### Example
 
-Sending SMS
+##### Sending SMS
 
 	public function sendSMS()
 	{
@@ -70,7 +69,7 @@ Successful message should output positive string value
 	CP22051400000001
 
 
-Checking Credit Balance
+##### Checking Credit Balance
 
 	public function balanceCheck()
 	{
