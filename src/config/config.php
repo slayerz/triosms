@@ -26,10 +26,24 @@ return array(
 	| SENDER ID
 	|--------------------------------------------------------------------------
 	|
-	| SMS gateway SENDER ID for this application
+	| SMS gateway SENDER ID provided for this application
 	|
 	*/
     'sender' => 'CLOUDSMS',
+
+    /*
+	|--------------------------------------------------------------------------
+	| SENDER MODE
+	|--------------------------------------------------------------------------
+	|
+	| SENDER MODE chosen to send the SMS
+    | Credit will be deducted from the respective account
+    |
+    | 'shortcode' account for 5 digits number
+    | 'longcode' account for 10 digits number
+	|
+	*/
+    'mode'   => 'shortcode',
 
     /*
 	|--------------------------------------------------------------------------
@@ -37,6 +51,7 @@ return array(
 	|--------------------------------------------------------------------------
 	|
 	| SMS content format
+    |
     | ASCII: 1
     | UNICODE: 4
 	|
