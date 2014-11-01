@@ -53,7 +53,7 @@ class Triosms {
     public function send($recipient, $message, $mode = '', $format = '')
     {
         /* make sure credit is available before proceed */
-        $balance = Sms::balance(empty($mode) ? $this->mode : $mode);
+        $balance = $this->balance(empty($mode) ? $this->mode : $mode);
 
         if ($balance == 0)
         {
