@@ -13,15 +13,15 @@ Send SMS in Laravel 4 using API from [trio-mobile.com](http://www.trio-mobile.co
 
 Require this package with composer:
 
-	composer require slayerz/triosms  
+	composer require slayerz/triosms
 
 After updating composer, add the ServiceProvider to the providers array in `app/config/app.php`
 
-	'Slayerz\Triosms\TriosmsServiceProvider',  
+	'Slayerz\Triosms\TriosmsServiceProvider',
 
 You can have your own config for this package by publishing it
 
-	php artisan config:publish slayerz/triosms  
+	php artisan config:publish slayerz/triosms
 
 Once published, you can modify the config in `app/config/packages/slayerz/triosms/config.php`
 
@@ -35,11 +35,11 @@ The default sender mode is set to `shortcode`
 Available mode for Trio SMS:
 
 	'shortcode' (send SMS using 5 digits number to international)
-	'longcode'  (send SMS using 10 digits number within Malaysia)  
+	'longcode'  (send SMS using 10 digits number within Malaysia)
 
 ### Usage
 
-##### Function send()
+##### Function send( )
 
 	Sms::send($recipient, $message, $mode = '', $format = '');
 
@@ -48,11 +48,12 @@ Available mode for Trio SMS:
 - **$mode**: account to send the SMS from (default: `shortcode`)
 - **$format**: content type either 1: ASCII or 4: UNICODE (defaut: `1`)  
 
-##### Function balance()
+
+##### Function balance( )
 
 	Sms::balance($mode = '');
 
-- **$mode**: account you wish to check balance from (default: `shortcode`)  
+- **$mode**: account you wish to check balance from (default: `shortcode`)
 
 ### Example
 
@@ -60,23 +61,24 @@ Available mode for Trio SMS:
 
 	public function sendSMS()
 	{
-		return Sms::send('60123456789', 'Your message in 160 chars for ASCII format and 70 chars for UNICODE');
-	}  
+		return Sms::send('60123456789', '160 chars for ASCII & 70 chars for UNICODE');
+	}
 
 Successful message should output positive string value
 
-	CP22051400000001  
+	CP22051400000001
+
 
 ##### Checking Credit Balance
 
 	public function balanceCheck()
 	{
 		return Sms::balance();
-	}  
+	}
 
 Successful check should output positive integer value
 
-	1987  
+	1987
 
 ### License
 
