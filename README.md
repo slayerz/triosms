@@ -41,7 +41,7 @@ Available mode for Trio SMS:
 
 ##### Function send( )
 
-	Sms::send($recipient, $message, $mode = '', $format = '');
+	SMS::send($recipient, $message, $mode = '', $format = '');
 
 - **$recipient**: recipient mobile number
 - **$message**: message to be sent (160 chars for ASCII, 70 chars for UNICODE)
@@ -51,7 +51,7 @@ Available mode for Trio SMS:
 
 ##### Function balance( )
 
-	Sms::balance($mode = '');
+	SMS::balance($mode = '');
 
 - **$mode**: account you wish to check balance from (default: `shortcode`)
 
@@ -61,7 +61,7 @@ Available mode for Trio SMS:
 
 	public function sendSMS()
 	{
-		return Sms::send('60123456789', '160 chars for ASCII & 70 chars for UNICODE');
+		return SMS::send('60123456789', '160 chars for ASCII & 70 chars for UNICODE');
 	}
 
 Successful message should output positive string value
@@ -73,7 +73,7 @@ Successful message should output positive string value
 
 	public function balanceCheck()
 	{
-		return Sms::balance();
+		return SMS::balance();
 	}
 
 Successful check should output positive integer value

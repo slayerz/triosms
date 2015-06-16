@@ -36,7 +36,7 @@ class TriosmsServiceProvider extends ServiceProvider {
         $this->app->booting(function()
         {
             $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-            $loader->alias('Sms', 'Slayerz\Triosms\Facades\Triosms');
+            $loader->alias('SMS', 'Slayerz\Triosms\Facades\Triosms');
         });
 	}
 
